@@ -11,15 +11,15 @@ const FeaturedLessons = ({ lesson = [] }) => {
   const isPremiumUser = currentUser?.plan === "premium" || currentUser?.isPremium;
 
   return (
-    <section className="py-20 px-6 bg-[#fcf8f9]">
+    <section className="py-20 px-6 bg-theme/5 border-y border-theme/10">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <span className="text-pink-600 font-bold tracking-widest uppercase text-sm">Handpicked Wisdom</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#670D2F] mt-2">Featured Insights</h2>
+            <span className="text-theme/75 font-bold tracking-widest uppercase text-xs">Handpicked Wisdom</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-theme mt-2">Featured Insights</h2>
           </div>
-          <Link href="/public-lessons" className="flex items-center gap-2 text-[#670D2F] font-semibold hover:gap-4 transition-all">
+          <Link href="/public-lessons" className="flex items-center gap-2 text-theme font-semibold hover:gap-4 transition-all">
             Explore All Lessons <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -35,40 +35,40 @@ const FeaturedLessons = ({ lesson = [] }) => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden hover:shadow-2xl transition-all relative flex flex-col justify-between min-h-[480px]"
+                className="group card-theme rounded-[2rem] shadow-md hover:shadow-2xl hover:scale-[1.01] overflow-hidden transition-all duration-300 relative flex flex-col justify-between min-h-[480px]"
               >
                 {/* Blurred content wrapper when locked */}
                 <div className={`flex-1 flex flex-col justify-between ${isLocked ? "filter blur-[4px] pointer-events-none select-none" : ""}`}>
                   <div>
                     {/* Image */}
-                    <div className="relative h-60 overflow-hidden bg-gray-100">
+                    <div className="relative h-60 overflow-hidden bg-theme/5">
                       <img 
                         src={lesson.image || "/logo.webp"} 
                         alt={lesson.title} 
                         className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                       />
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#670D2F] z-10">
+                      <div className="absolute top-4 left-4 bg-theme/80 text-theme backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold z-10 border border-theme/20 shadow-sm">
                         {lesson.category}
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="p-6">
-                      <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                      <div className="flex items-center gap-4 text-xs text-muted mb-4">
                         <span className="flex items-center gap-1"><Eye className="w-3 h-3" /> {lesson.views || 0}</span>
                         <span className="flex items-center gap-1"><Bookmark className="w-3 h-3" /> {lesson.savedCount || 0}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-[#670D2F] mb-3 group-hover:text-pink-600 transition">
+                      <h3 className="text-xl font-bold text-theme mb-3 group-hover:opacity-85 transition">
                         {lesson.title}
                       </h3>
-                      <p className="text-gray-600 text-sm line-clamp-3">
+                      <p className="text-muted text-sm line-clamp-3">
                         {lesson.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="p-6 pt-0">
-                    <div className="w-full text-center py-3 rounded-xl bg-[#670D2F] text-white font-bold">
+                    <div className="w-full text-center py-3 rounded-xl bg-primary text-[var(--background)] font-extrabold shadow-md hover:opacity-90 transition cursor-pointer">
                       Read Insight
                     </div>
                   </div>
@@ -76,14 +76,14 @@ const FeaturedLessons = ({ lesson = [] }) => {
 
                 {/* Overlay upgrade option when locked */}
                 {isLocked ? (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-white/40 backdrop-blur-[2px] z-20">
-                    <Lock className="w-10 h-10 text-[#670D2F] mb-3" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-theme/40 backdrop-blur-[2px] z-20">
+                    <Lock className="w-10 h-10 text-theme mb-3" />
                     <span className="text-[10px] font-black text-amber-900 bg-yellow-400 px-3 py-1.5 rounded-full uppercase tracking-wider mb-4 shadow">
                       Premium Lesson
                     </span>
                     <Link 
                       href="/pricing" 
-                      className="w-full text-center py-3 bg-[#670D2F] hover:bg-[#5a0b27] text-white rounded-xl font-bold transition shadow-lg shadow-[#670D2F]/20 cursor-pointer"
+                      className="w-full text-center py-3 bg-primary hover:opacity-90 text-[var(--background)] rounded-xl font-bold transition shadow-lg cursor-pointer"
                     >
                       Upgrade to Unlock
                     </Link>
