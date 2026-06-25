@@ -102,8 +102,7 @@ export default function LessonDetailsPage() {
       toast.error("Please sign in to like this lesson");
       router.push("/signin");
       return;
-    }
-    
+    }  
     try {
       const token = await getToken();
       const res = await fetch(`${BACKEND_URL}/lessons/${id}/like`, {
