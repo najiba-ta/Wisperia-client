@@ -192,7 +192,6 @@ export default function LessonDetailsPage() {
       setReporting(false);
     }
   };
-
   if (loading) return <div className="text-center py-20">Loading...</div>;
   if (!lesson) return null;
 
