@@ -156,7 +156,6 @@ export default function LessonDetailsPage() {
       toast.error("Failed to toggle favorite status");
     }
   };
-
   const handleReport = async (e) => {
     e.preventDefault();
     if (!currentUser) {
