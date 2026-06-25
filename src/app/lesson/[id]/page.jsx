@@ -286,6 +286,7 @@ export default function LessonDetailsPage() {
                   >
                     {reporting ? "Submitting..." : "Submit Report"}
                   </button>
+                  
                   <button 
                     type="button" 
                     onClick={() => { setShowReportModal(false); setReason(""); }}
