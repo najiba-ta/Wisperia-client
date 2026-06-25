@@ -286,8 +286,7 @@ export default function LessonDetailsPage() {
                   >
                     {reporting ? "Submitting..." : "Submit Report"}
                   </button>
-
-               <button 
+              nn  <button 
                     type="button" 
                     onClick={() => { setShowReportModal(false); setReason(""); }}
                     className="flex-1 glass-button font-bold py-3 rounded-xl transition text-sm cursor-pointer"
