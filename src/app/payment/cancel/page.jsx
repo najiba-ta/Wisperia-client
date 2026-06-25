@@ -2,7 +2,6 @@
 import { XCircle } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 export default function CancelPage() {
   return (
     <div className="min-h-screen bg-[#fcf8f9] flex flex-col items-center justify-center px-6 text-center">
