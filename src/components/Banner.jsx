@@ -35,7 +35,6 @@ export default function HeroBanner() {
           Preserve, Reflect <br />
           <span className="text-primary italic">& Share Wisdom</span>
         </h1>
-
         <p className="text-muted text-lg max-w-lg leading-relaxed border-l-4 border-primary pl-6">
           Your experiences are valuable. Create, organize, and share life
           lessons on a platform designed for meaningful reflection and personal
