@@ -196,7 +196,6 @@ export default function LessonDetailsPage() {
   if (!lesson) return null;
 
   const isLocked = (lesson.accesslevel === "premium" || lesson.accessLevel === "premium") && !isPremiumUser && currentUser?.role !== "admin";
-
   return (
     <main className="min-h-screen py-16 px-4 bg-theme text-theme transition-all duration-300">
       <div className="max-w-4xl mx-auto">
