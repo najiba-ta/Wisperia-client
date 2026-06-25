@@ -25,7 +25,6 @@ export default function CancelPage() {
           </Link>
         </div>
       </motion.div>
-      
     </div>
   );
 }
