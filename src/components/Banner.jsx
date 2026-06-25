@@ -19,7 +19,7 @@ export default function HeroBanner() {
 
   return (
     <section className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-12 px-6 md:px-12 bg-theme shadow-2xl overflow-hidden">
-    
+      {/* LEFT: CONTENT */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
