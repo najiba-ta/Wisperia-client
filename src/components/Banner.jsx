@@ -41,6 +41,8 @@ export default function HeroBanner() {
           growth.
         </p>
         
+
+        
         <div className="flex flex-wrap gap-4 mt-4">
           <button className="px-8 py-4 rounded-full bg-primary text-white font-bold hover:scale-105 transition shadow-xl flex items-center gap-2">
             Share a Lesson <ArrowRight className="w-5 h-5" />
