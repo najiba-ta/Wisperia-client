@@ -129,7 +129,6 @@ export default function LessonDetailsPage() {
       toast.error("Failed to update like status");
     }
   };
-
   const handleFavorite = async () => {
     if (!currentUser) {
       toast.error("Please sign in to save this lesson");
